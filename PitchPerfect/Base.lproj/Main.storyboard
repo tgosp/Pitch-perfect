@@ -100,7 +100,7 @@
                         <viewControllerLayoutGuide type="top" id="sT6-bb-j4Q"/>
                         <viewControllerLayoutGuide type="bottom" id="UFc-k8-mNY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HOl-AX-t4i" customClass="PlaySounds">
+                    <view key="view" contentMode="scaleToFill" id="HOl-AX-t4i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -142,12 +142,12 @@
                                 <exclude reference="GSH-Ks-MP0"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="4ct-Rd-LNa"/>
                                 <exclude reference="LdU-ZI-inY"/>
                                 <exclude reference="nPH-dZ-Z9X"/>
                                 <exclude reference="WxR-Ax-zSU"/>
                                 <exclude reference="kqA-Fc-qKS"/>
                                 <exclude reference="uli-UT-Xep"/>
-                                <exclude reference="4ct-Rd-LNa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -157,12 +157,12 @@
                                 <include reference="GSH-Ks-MP0"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="4ct-Rd-LNa"/>
                                 <include reference="LdU-ZI-inY"/>
                                 <include reference="nPH-dZ-Z9X"/>
                                 <include reference="WxR-Ax-zSU"/>
                                 <include reference="kqA-Fc-qKS"/>
                                 <include reference="uli-UT-Xep"/>
-                                <include reference="4ct-Rd-LNa"/>
                             </mask>
                         </variation>
                     </view>

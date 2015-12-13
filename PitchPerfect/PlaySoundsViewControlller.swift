@@ -16,6 +16,7 @@ class PlaySoundsViewControlller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: create audio player
         if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
             let fileURL = NSURL.fileURLWithPath(filePath)
             do {
@@ -36,6 +37,7 @@ class PlaySoundsViewControlller: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
+        // MARK: play audio slow
         audioPlayer.stop()
         audioPlayer.currentTime = 0
         audioPlayer.rate = 0.5
@@ -43,6 +45,7 @@ class PlaySoundsViewControlller: UIViewController {
     }
     
     @IBAction func playFastAUdio(sender: AnyObject) {
+        // MARK: play audio fast
         audioPlayer.stop()
         audioPlayer.currentTime = 0
         audioPlayer.rate = 2
@@ -50,6 +53,7 @@ class PlaySoundsViewControlller: UIViewController {
     }
     
     @IBAction func stopPlayAudio(sender: UIButton) {
+        // MARK: stop play audio
         audioPlayer.currentTime = 0
         audioPlayer.stop()
     }
