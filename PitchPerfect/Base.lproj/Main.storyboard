@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ith-py-lxI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="microphone"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZu-vq-7bT"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHd-A7-dhg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44o-ZB-tyS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopAudio"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOj-CV-emo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ith-py-lxI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Nr-Ul-BKz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="44o-ZB-tyS" secondAttribute="bottom" constant="20" id="OpG-Bb-ZO1"/>
+                            <constraint firstItem="44o-ZB-tyS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RY4-z8-qhQ"/>
+                            <constraint firstItem="UHd-A7-dhg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YZr-Dc-q1H"/>
+                            <constraint firstItem="Ith-py-lxI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ewr-vk-bGG"/>
+                            <constraint firstItem="UHd-A7-dhg" firstAttribute="top" secondItem="Ith-py-lxI" secondAttribute="bottom" constant="20" id="gsT-eY-8M3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ith-py-lxI"/>
+                                <exclude reference="UHd-A7-dhg"/>
+                                <exclude reference="44o-ZB-tyS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Nr-Ul-BKz"/>
+                                <exclude reference="ewr-vk-bGG"/>
+                                <exclude reference="YZr-Dc-q1H"/>
+                                <exclude reference="gsT-eY-8M3"/>
+                                <exclude reference="RY4-z8-qhQ"/>
+                                <exclude reference="OpG-Bb-ZO1"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ith-py-lxI"/>
+                                <include reference="UHd-A7-dhg"/>
+                                <include reference="44o-ZB-tyS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0Nr-Ul-BKz"/>
+                                <include reference="ewr-vk-bGG"/>
+                                <include reference="YZr-Dc-q1H"/>
+                                <include reference="gsT-eY-8M3"/>
+                                <include reference="RY4-z8-qhQ"/>
+                                <include reference="OpG-Bb-ZO1"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="Ith-py-lxI" id="4F1-WY-VYG"/>
+                        <outlet property="recordingLabel" destination="UHd-A7-dhg" id="ckY-cV-KBC"/>
+                        <outlet property="stopButton" destination="44o-ZB-tyS" id="iYg-PS-fhp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="348"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="microphone" width="100" height="100"/>
+        <image name="stopAudio" width="50" height="50"/>
+    </resources>
 </document>

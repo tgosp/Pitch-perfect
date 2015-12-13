@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var recordingLabel: UILabel!
+    
+    @IBOutlet weak var recordButton: UIButton!
+    
+    @IBOutlet weak var stopButton: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +29,21 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func recordAudio(sender: UIButton) {
+        // UI changes
+        recordButton.enabled = false
+        recordingLabel.hidden = false
+        stopButton.hidden = false
+        
+        
+        
+        //TODO: record users voice
+    }
+    
+    @IBAction func stopRecording(sender: UIButton) {
+        recordingLabel.hidden = true
+        recordButton.enabled = true
+        sender.hidden = true
+    }
 }
 
