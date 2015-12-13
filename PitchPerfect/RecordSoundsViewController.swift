@@ -56,16 +56,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryRecord)
 
-        
-
-        
         // initialize and prepare the recorder
-        
-        
-        
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
-        
-
         
         audioRecorder.delegate = self
         
