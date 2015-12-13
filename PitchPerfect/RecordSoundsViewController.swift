@@ -32,7 +32,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        // TODO reset screen state
+        recordingLabel.text = "Tap to Record"
     }
 
 
@@ -94,7 +94,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // MARK: UI changes
         sender.hidden = true
         recordButton.enabled = true
-        recordingLabel.text = "Tap to Record"
+
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
