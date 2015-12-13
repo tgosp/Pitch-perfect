@@ -40,7 +40,21 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        // MARK: task 2
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        audioPlayer.stop()
+    }
+    
     @IBAction func playSlowAudio(sender: UIButton) {
+        // MARK: task 2
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
         // MARK: play audio slow
         stopButton.hidden = false
         audioPlayer.stop()
@@ -50,6 +64,11 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func playFastAUdio(sender: AnyObject) {
+        // MARK: task 2
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
         // MARK: play audio fast
         stopButton.hidden = false
         audioPlayer.stop()
