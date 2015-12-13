@@ -39,7 +39,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         // MARK: UI changes
         recordButton.enabled = false
-        recordingLabel.hidden = false
+        recordingLabel.text = "recording in progress"
         stopButton.hidden = false
         
         // MARK: record user's voice
@@ -77,7 +77,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             print("Recording was not successful")
             recordButton.enabled = true
             stopButton.hidden = true
-            recordingLabel.hidden = true
+            recordingLabel.text = "Tap to Record"
         }
 
     }
@@ -94,7 +94,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // MARK: UI changes
         sender.hidden = true
         recordButton.enabled = true
-        recordingLabel.hidden = true
+        recordingLabel.text = "Tap to Record"
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
