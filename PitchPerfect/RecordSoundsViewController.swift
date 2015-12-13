@@ -44,11 +44,9 @@ class RecordSoundsViewController: UIViewController {
         // MARK: record user's voice
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        let currentTime = NSDate()
+
         
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "ddMMyyyy-HHmmss"
-        let recordingName = formatter.stringFromDate(currentTime)+".wav"
+        let recordingName = "recorded_audio.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
         print(filePath)
