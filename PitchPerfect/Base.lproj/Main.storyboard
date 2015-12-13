@@ -111,7 +111,7 @@
                                     <action selector="playFastAUdio:" destination="bjL-xh-lC8" eventType="touchUpInside" id="UzQ-0e-WPi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3X-pD-eaM">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3X-pD-eaM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stopAudio"/>
                                 <connections>
@@ -166,6 +166,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="stopButton" destination="n3X-pD-eaM" id="PHr-n8-Vd9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHN-re-NK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,10 +9,13 @@
 import UIKit
 import AVFoundation
 
-class PlaySoundsViewControlller: UIViewController {
+class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
+
+    @IBOutlet weak var stopButton: UIButton!
     
     var audioPlayer:AVAudioPlayer!
     var recievedAudio:RecordedAudio!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +23,12 @@ class PlaySoundsViewControlller: UIViewController {
         // MARK: create audio player
         audioPlayer = try! AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl)
         audioPlayer.enableRate = true
+        audioPlayer.delegate = self
 
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        stopButton.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,6 +37,7 @@ class PlaySoundsViewControlller: UIViewController {
     
     @IBAction func playSlowAudio(sender: UIButton) {
         // MARK: play audio slow
+        stopButton.hidden = false
         audioPlayer.stop()
         audioPlayer.currentTime = 0
         audioPlayer.rate = 0.5
@@ -37,6 +46,7 @@ class PlaySoundsViewControlller: UIViewController {
     
     @IBAction func playFastAUdio(sender: AnyObject) {
         // MARK: play audio fast
+        stopButton.hidden = false
         audioPlayer.stop()
         audioPlayer.currentTime = 0
         audioPlayer.rate = 2
@@ -47,7 +57,9 @@ class PlaySoundsViewControlller: UIViewController {
         // MARK: stop play audio
         audioPlayer.currentTime = 0
         audioPlayer.stop()
+        stopButton.hidden = true
     }
     
+
 }
 
