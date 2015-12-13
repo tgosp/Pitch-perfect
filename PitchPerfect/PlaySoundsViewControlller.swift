@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
+class PlaySoundsViewControlller: UIViewController {
 
     @IBOutlet weak var stopButton: UIButton!
     
@@ -25,54 +25,42 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         audioPlayer = try! AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl)
         audioPlayer.enableRate = true
         
-        audioPlayer.delegate = self
-        
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: recievedAudio.filePathUrl)
     }
 
-    
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
-        stopButton.hidden = true
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     override func viewWillDisappear(animated: Bool) {
-        // MARK: task 2
+        stopAudioPlaying()
+    }
+    
+    func stopAudioPlaying(){
+        
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
         
         audioPlayer.stop()
+        audioPlayer.currentTime = 0
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
-        // MARK: task 2
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioPlaying()
         
         // MARK: play audio slow
-        stopButton.hidden = false
-        audioPlayer.stop()
-        audioPlayer.currentTime = 0
         audioPlayer.rate = 0.5
         audioPlayer.play()
     }
     
     @IBAction func playFastAUdio(sender: AnyObject) {
         // MARK: task 2
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioPlaying()
         
         // MARK: play audio fast
-        stopButton.hidden = false
-        audioPlayer.stop()
-        audioPlayer.currentTime = 0
         audioPlayer.rate = 2
         audioPlayer.play()
     }
@@ -87,9 +75,7 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
     
     
     func playAudioWithVariablePitch(pitch: Float){
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAudioPlaying()
         
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -112,9 +98,7 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
     
     @IBAction func stopPlayAudio(sender: UIButton) {
         // MARK: stop play audio
-        audioPlayer.currentTime = 0
-        audioPlayer.stop()
-        stopButton.hidden = true
+        stopAudioPlaying()
     }
     
 
