@@ -12,6 +12,7 @@
 		9898FD971C1D01AE007B9A46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9898FD951C1D01AE007B9A46 /* Main.storyboard */; };
 		9898FD991C1D01AE007B9A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9898FD981C1D01AE007B9A46 /* Assets.xcassets */; };
 		9898FD9C1C1D01AE007B9A46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9898FD9A1C1D01AE007B9A46 /* LaunchScreen.storyboard */; };
+		9898FDA41C1DCE81007B9A46 /* PlaySoundsViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898FDA31C1DCE81007B9A46 /* PlaySoundsViewControlller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9898FD981C1D01AE007B9A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9898FD9B1C1D01AE007B9A46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9898FD9D1C1D01AE007B9A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9898FDA31C1DCE81007B9A46 /* PlaySoundsViewControlller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewControlller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				9898FD981C1D01AE007B9A46 /* Assets.xcassets */,
 				9898FD9A1C1D01AE007B9A46 /* LaunchScreen.storyboard */,
 				9898FD9D1C1D01AE007B9A46 /* Info.plist */,
+				9898FDA31C1DCE81007B9A46 /* PlaySoundsViewControlller.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9898FD941C1D01AE007B9A46 /* ViewController.swift in Sources */,
+				9898FDA41C1DCE81007B9A46 /* PlaySoundsViewControlller.swift in Sources */,
 				9898FD921C1D01AE007B9A46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

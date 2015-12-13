@@ -55,12 +55,12 @@
                                 <exclude reference="44o-ZB-tyS"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="OpG-Bb-ZO1"/>
+                                <exclude reference="RY4-z8-qhQ"/>
                                 <exclude reference="0Nr-Ul-BKz"/>
                                 <exclude reference="ewr-vk-bGG"/>
                                 <exclude reference="YZr-Dc-q1H"/>
                                 <exclude reference="gsT-eY-8M3"/>
-                                <exclude reference="RY4-z8-qhQ"/>
-                                <exclude reference="OpG-Bb-ZO1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -70,12 +70,12 @@
                                 <include reference="44o-ZB-tyS"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="OpG-Bb-ZO1"/>
+                                <include reference="RY4-z8-qhQ"/>
                                 <include reference="0Nr-Ul-BKz"/>
                                 <include reference="ewr-vk-bGG"/>
                                 <include reference="YZr-Dc-q1H"/>
                                 <include reference="gsT-eY-8M3"/>
-                                <include reference="RY4-z8-qhQ"/>
-                                <include reference="OpG-Bb-ZO1"/>
                             </mask>
                         </variation>
                     </view>
@@ -90,17 +90,55 @@
             </objects>
             <point key="canvasLocation" x="1222.5" y="348"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controlller-->
         <scene sceneID="CQK-rt-GwZ">
             <objects>
-                <viewController id="bjL-xh-lC8" sceneMemberID="viewController">
+                <viewController id="bjL-xh-lC8" customClass="PlaySoundsViewControlller" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sT6-bb-j4Q"/>
                         <viewControllerLayoutGuide type="bottom" id="UFc-k8-mNY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HOl-AX-t4i">
+                    <view key="view" contentMode="scaleToFill" id="HOl-AX-t4i" customClass="PlaySounds">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSH-Ks-MP0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="62" y="117" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWP-M6-za2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="300" y="117" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3X-pD-eaM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="550" width="46" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GSH-Ks-MP0"/>
+                                <exclude reference="OWP-M6-za2"/>
+                                <exclude reference="n3X-pD-eaM"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GSH-Ks-MP0"/>
+                                <include reference="OWP-M6-za2"/>
+                                <include reference="n3X-pD-eaM"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHN-re-NK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
