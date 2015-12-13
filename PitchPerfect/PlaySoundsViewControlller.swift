@@ -40,6 +40,15 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        // MARK: task 2
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        audioPlayer.stop()
+    }
+    
     @IBAction func playSlowAudio(sender: UIButton) {
         // MARK: task 2
         audioPlayer.stop()
