@@ -20,7 +20,7 @@ class PlaySoundsViewControlller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Play audio" // wasnt able to do this with storyboard, why?
         // MARK: create audio player
         audioPlayer = try! AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl)
         audioPlayer.enableRate = true
