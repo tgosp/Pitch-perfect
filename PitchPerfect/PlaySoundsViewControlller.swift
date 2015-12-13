@@ -26,6 +26,7 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         audioPlayer.delegate = self
 
     }
+
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         stopButton.hidden = true
