@@ -18,4 +18,7 @@ class PlaySoundsViewControlller: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func playSlowAudio(sender: UIButton) {
+        // TODO: play slow audio
+    }
 }
