@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
+class PlaySoundsViewControlller: UIViewController {
 
     @IBOutlet weak var stopButton: UIButton!
     
@@ -25,16 +25,10 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         audioPlayer = try! AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl)
         audioPlayer.enableRate = true
         
-        audioPlayer.delegate = self
-        
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: recievedAudio.filePathUrl)
     }
 
-    
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
-        stopButton.hidden = true
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,7 +52,6 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         stopAudioPlaying()
         
         // MARK: play audio slow
-        stopButton.hidden = false
         audioPlayer.rate = 0.5
         audioPlayer.play()
     }
@@ -68,7 +61,6 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         stopAudioPlaying()
         
         // MARK: play audio fast
-        stopButton.hidden = false
         audioPlayer.rate = 2
         audioPlayer.play()
     }
@@ -107,7 +99,6 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
     @IBAction func stopPlayAudio(sender: UIButton) {
         // MARK: stop play audio
         stopAudioPlaying()
-        stopButton.hidden = true
     }
     
 
