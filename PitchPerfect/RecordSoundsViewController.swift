@@ -19,6 +19,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder:AVAudioRecorder!
     var recordedAudio: RecordedAudio!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +54,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
         // setup audio session
         let session = AVAudioSession.sharedInstance()
-        try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        try! session.setCategory(AVAudioSessionCategoryRecord)
+
+        
+
         
         // initialize and prepare the recorder
+        
+        
+        
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
+        
+
         
         audioRecorder.delegate = self
         
@@ -99,6 +108,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
+        try! audioSession.setCategory(AVAudioSessionCategoryPlayback)
         try! audioSession.setActive(false)
 
         
