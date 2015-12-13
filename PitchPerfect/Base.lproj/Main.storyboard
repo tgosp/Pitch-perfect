@@ -128,17 +128,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzI-i3-RbM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="chipmunk"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="50" y="250" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="playChipmunkAudio:" destination="bjL-xh-lC8" eventType="touchUpInside" id="1UG-Me-Df0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PZ-uc-ueQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthvader"/>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="bjL-xh-lC8" eventType="touchUpInside" id="yWj-TF-VSd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UFc-k8-mNY" firstAttribute="top" secondItem="n3X-pD-eaM" secondAttribute="bottom" constant="20" id="4ct-Rd-LNa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6PZ-uc-ueQ" secondAttribute="trailing" constant="30" id="8ZY-hK-go1"/>
+                            <constraint firstItem="6PZ-uc-ueQ" firstAttribute="top" secondItem="OWP-M6-za2" secondAttribute="bottom" constant="50" id="AEN-va-PL2"/>
                             <constraint firstItem="GSH-Ks-MP0" firstAttribute="top" secondItem="sT6-bb-j4Q" secondAttribute="bottom" constant="50" id="LdU-ZI-inY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OWP-M6-za2" secondAttribute="trailing" constant="30" id="WxR-Ax-zSU"/>
                             <constraint firstItem="kzI-i3-RbM" firstAttribute="top" secondItem="GSH-Ks-MP0" secondAttribute="bottom" constant="50" id="X2R-rZ-QKW"/>
@@ -153,6 +159,7 @@
                                 <exclude reference="n3X-pD-eaM"/>
                                 <exclude reference="GSH-Ks-MP0"/>
                                 <exclude reference="kzI-i3-RbM"/>
+                                <exclude reference="6PZ-uc-ueQ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="LdU-ZI-inY"/>
@@ -161,6 +168,8 @@
                                 <exclude reference="ifX-In-KR9"/>
                                 <exclude reference="WxR-Ax-zSU"/>
                                 <exclude reference="kqA-Fc-qKS"/>
+                                <exclude reference="8ZY-hK-go1"/>
+                                <exclude reference="AEN-va-PL2"/>
                                 <exclude reference="uli-UT-Xep"/>
                                 <exclude reference="4ct-Rd-LNa"/>
                             </mask>
@@ -171,6 +180,7 @@
                                 <include reference="n3X-pD-eaM"/>
                                 <include reference="GSH-Ks-MP0"/>
                                 <include reference="kzI-i3-RbM"/>
+                                <include reference="6PZ-uc-ueQ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="LdU-ZI-inY"/>
@@ -179,6 +189,8 @@
                                 <include reference="ifX-In-KR9"/>
                                 <include reference="WxR-Ax-zSU"/>
                                 <include reference="kqA-Fc-qKS"/>
+                                <include reference="8ZY-hK-go1"/>
+                                <include reference="AEN-va-PL2"/>
                                 <include reference="uli-UT-Xep"/>
                                 <include reference="4ct-Rd-LNa"/>
                             </mask>
@@ -213,6 +225,7 @@
     </scenes>
     <resources>
         <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="rabit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>

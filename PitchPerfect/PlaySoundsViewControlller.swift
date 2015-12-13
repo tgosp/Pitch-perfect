@@ -62,6 +62,11 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         playAudioWithVariablePitch(1000)
     }
     
+    @IBAction func playDarthvaderAudio(sender: UIButton) {
+        playAudioWithVariablePitch(-1000)
+    }
+    
+    
     func playAudioWithVariablePitch(pitch: Float){
         audioPlayer.stop()
         audioEngine.stop()
@@ -82,7 +87,7 @@ class PlaySoundsViewControlller: UIViewController, AVAudioPlayerDelegate {
         try! audioEngine.start()
         
         audioPlayerNode.play()
-        
+
     }
     
     
