@@ -125,8 +125,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UFc-k8-mNY" firstAttribute="top" secondItem="n3X-pD-eaM" secondAttribute="bottom" constant="20" id="4ct-Rd-LNa"/>
-                            <constraint firstItem="GSH-Ks-MP0" firstAttribute="top" secondItem="sT6-bb-j4Q" secondAttribute="bottom" constant="36" id="LdU-ZI-inY"/>
-                            <constraint firstItem="GSH-Ks-MP0" firstAttribute="leading" secondItem="HOl-AX-t4i" secondAttribute="leadingMargin" constant="15" id="nPH-dZ-Z9X"/>
+                            <constraint firstItem="GSH-Ks-MP0" firstAttribute="top" secondItem="sT6-bb-j4Q" secondAttribute="bottom" constant="50" id="LdU-ZI-inY"/>
+                            <constraint firstItem="GSH-Ks-MP0" firstAttribute="leading" secondItem="HOl-AX-t4i" secondAttribute="leadingMargin" constant="30" id="nPH-dZ-Z9X"/>
                             <constraint firstItem="n3X-pD-eaM" firstAttribute="centerX" secondItem="HOl-AX-t4i" secondAttribute="centerX" id="uli-UT-Xep"/>
                         </constraints>
                         <variation key="default">
