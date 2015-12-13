@@ -20,6 +20,7 @@ class PlaySoundsViewControlller: UIViewController {
             let fileURL = NSURL.fileURLWithPath(filePath)
             do {
                 audioPlayer = try AVAudioPlayer(contentsOfURL: fileURL)
+                audioPlayer.enableRate = true
             } catch{
                 print("unable to create audio player instance, check audio file name")
             }
@@ -35,6 +36,7 @@ class PlaySoundsViewControlller: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
+        audioPlayer.rate = 0.5
         audioPlayer.play()
     }
 }
