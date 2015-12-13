@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        // TODO reset screen state
+    }
 
 
     @IBAction func recordAudio(sender: UIButton) {
@@ -41,9 +45,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func stopRecording(sender: UIButton) {
-        recordingLabel.hidden = true
-        recordButton.enabled = true
         sender.hidden = true
+        recordButton.enabled = true
+        recordingLabel.hidden = true
     }
 }
 
