@@ -18,4 +18,6 @@ struct Constants {
     
     static let playAudio = "Play audio"
     
+    static let recordingWasNotSuccessful = "Recording was not successful"
+    
 }
