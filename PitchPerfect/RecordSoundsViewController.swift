@@ -62,12 +62,19 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             // MARK: save recorded audio file
             recordedAudio = RecordedAudio(filePath: recorder.url, audioFileTitle: recorder.url.lastPathComponent!)
             // MARK: call segue
+            
             performSegueWithIdentifier(Constants.stopRecordingSegue, sender: recordedAudio)
         } else {
-            print("Recording was not successful")
+            print(Constants.recordingWasNotSuccessful)
             recordButton.enabled = true
             stopButton.hidden = true
             recordingLabel.text = Constants.tapToRecord
+            
+            
+            let alertController = UIAlertController(title: Constants.errorAlertTitle, message: Constants.errorAlertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: Constants.dismiss, style: UIAlertActionStyle.Default, handler: nil))
+            presentViewController(alertController, animated: true, completion: nil)
+            
         }
 
     }
