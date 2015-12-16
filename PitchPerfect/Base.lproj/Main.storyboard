@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w4b-BW-SeZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w4b-BW-SeZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -139,18 +139,59 @@
                                     <action selector="playDarthvaderAudio:" destination="bjL-xh-lC8" eventType="touchUpInside" id="yWj-TF-VSd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-Vy-t3N">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reverb effect"/>
+                                <connections>
+                                    <action selector="playWithReverbAudioEffect:" destination="bjL-xh-lC8" eventType="touchUpInside" id="ZhW-bu-DVI"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JI1-4p-XRw">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Nl8-Yo-kuM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nl8-Yo-kuM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Nl8-Yo-kuM"/>
+                                    </mask>
+                                </variation>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="N6Z-0h-vlL">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjust room size and wetDryMix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppn-zi-43H">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UFc-k8-mNY" firstAttribute="top" secondItem="n3X-pD-eaM" secondAttribute="bottom" constant="20" id="4ct-Rd-LNa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6PZ-uc-ueQ" secondAttribute="trailing" constant="30" id="8ZY-hK-go1"/>
-                            <constraint firstItem="6PZ-uc-ueQ" firstAttribute="top" secondItem="OWP-M6-za2" secondAttribute="bottom" constant="50" id="AEN-va-PL2"/>
-                            <constraint firstItem="GSH-Ks-MP0" firstAttribute="top" secondItem="sT6-bb-j4Q" secondAttribute="bottom" constant="50" id="LdU-ZI-inY"/>
+                            <constraint firstItem="6PZ-uc-ueQ" firstAttribute="top" secondItem="OWP-M6-za2" secondAttribute="bottom" constant="30" id="AEN-va-PL2"/>
+                            <constraint firstItem="E9J-Vy-t3N" firstAttribute="centerX" secondItem="HOl-AX-t4i" secondAttribute="centerX" id="Gz9-Rk-AbT"/>
+                            <constraint firstItem="JI1-4p-XRw" firstAttribute="top" secondItem="N6Z-0h-vlL" secondAttribute="bottom" constant="21" id="IVM-ZR-zi6"/>
+                            <constraint firstItem="GSH-Ks-MP0" firstAttribute="top" secondItem="sT6-bb-j4Q" secondAttribute="bottom" constant="30" id="LdU-ZI-inY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OWP-M6-za2" secondAttribute="trailing" constant="30" id="WxR-Ax-zSU"/>
-                            <constraint firstItem="kzI-i3-RbM" firstAttribute="top" secondItem="GSH-Ks-MP0" secondAttribute="bottom" constant="50" id="X2R-rZ-QKW"/>
+                            <constraint firstItem="kzI-i3-RbM" firstAttribute="top" secondItem="GSH-Ks-MP0" secondAttribute="bottom" constant="30" id="X2R-rZ-QKW"/>
+                            <constraint firstItem="JI1-4p-XRw" firstAttribute="centerX" secondItem="HOl-AX-t4i" secondAttribute="centerX" id="aD1-qm-ZI1"/>
+                            <constraint firstItem="n3X-pD-eaM" firstAttribute="top" secondItem="E9J-Vy-t3N" secondAttribute="bottom" constant="20" id="ciC-Qf-zgm"/>
+                            <constraint firstItem="ppn-zi-43H" firstAttribute="centerX" secondItem="HOl-AX-t4i" secondAttribute="centerX" id="gEr-TW-9da"/>
+                            <constraint firstItem="E9J-Vy-t3N" firstAttribute="top" secondItem="JI1-4p-XRw" secondAttribute="bottom" constant="16" id="hLm-DF-KwX"/>
                             <constraint firstItem="kzI-i3-RbM" firstAttribute="leading" secondItem="HOl-AX-t4i" secondAttribute="leadingMargin" constant="30" id="ifX-In-KR9"/>
-                            <constraint firstItem="OWP-M6-za2" firstAttribute="top" secondItem="sT6-bb-j4Q" secondAttribute="bottom" constant="50" id="kqA-Fc-qKS"/>
+                            <constraint firstItem="N6Z-0h-vlL" firstAttribute="top" secondItem="ppn-zi-43H" secondAttribute="bottom" constant="14" id="kBh-P7-Y1C"/>
+                            <constraint firstItem="N6Z-0h-vlL" firstAttribute="leading" secondItem="JI1-4p-XRw" secondAttribute="leading" id="kgE-Vu-GHo"/>
+                            <constraint firstItem="OWP-M6-za2" firstAttribute="top" secondItem="sT6-bb-j4Q" secondAttribute="bottom" constant="30" id="kqA-Fc-qKS"/>
                             <constraint firstItem="GSH-Ks-MP0" firstAttribute="leading" secondItem="HOl-AX-t4i" secondAttribute="leadingMargin" constant="30" id="nPH-dZ-Z9X"/>
+                            <constraint firstItem="N6Z-0h-vlL" firstAttribute="centerX" secondItem="HOl-AX-t4i" secondAttribute="centerX" id="tne-Am-k1Z"/>
                             <constraint firstItem="n3X-pD-eaM" firstAttribute="centerX" secondItem="HOl-AX-t4i" secondAttribute="centerX" id="uli-UT-Xep"/>
                         </constraints>
                         <variation key="default">
@@ -160,18 +201,31 @@
                                 <exclude reference="GSH-Ks-MP0"/>
                                 <exclude reference="kzI-i3-RbM"/>
                                 <exclude reference="6PZ-uc-ueQ"/>
+                                <exclude reference="E9J-Vy-t3N"/>
+                                <exclude reference="JI1-4p-XRw"/>
+                                <exclude reference="N6Z-0h-vlL"/>
+                                <exclude reference="ppn-zi-43H"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="4ct-Rd-LNa"/>
+                                <exclude reference="IVM-ZR-zi6"/>
+                                <exclude reference="aD1-qm-ZI1"/>
+                                <exclude reference="kBh-P7-Y1C"/>
+                                <exclude reference="kgE-Vu-GHo"/>
+                                <exclude reference="tne-Am-k1Z"/>
                                 <exclude reference="8ZY-hK-go1"/>
                                 <exclude reference="AEN-va-PL2"/>
+                                <exclude reference="Gz9-Rk-AbT"/>
+                                <exclude reference="hLm-DF-KwX"/>
                                 <exclude reference="LdU-ZI-inY"/>
                                 <exclude reference="nPH-dZ-Z9X"/>
                                 <exclude reference="WxR-Ax-zSU"/>
                                 <exclude reference="kqA-Fc-qKS"/>
                                 <exclude reference="X2R-rZ-QKW"/>
                                 <exclude reference="ifX-In-KR9"/>
+                                <exclude reference="ciC-Qf-zgm"/>
                                 <exclude reference="uli-UT-Xep"/>
+                                <exclude reference="gEr-TW-9da"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -181,22 +235,37 @@
                                 <include reference="GSH-Ks-MP0"/>
                                 <include reference="kzI-i3-RbM"/>
                                 <include reference="6PZ-uc-ueQ"/>
+                                <include reference="E9J-Vy-t3N"/>
+                                <include reference="JI1-4p-XRw"/>
+                                <include reference="N6Z-0h-vlL"/>
+                                <include reference="ppn-zi-43H"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="4ct-Rd-LNa"/>
+                                <include reference="IVM-ZR-zi6"/>
+                                <include reference="aD1-qm-ZI1"/>
+                                <include reference="kBh-P7-Y1C"/>
+                                <include reference="kgE-Vu-GHo"/>
+                                <include reference="tne-Am-k1Z"/>
                                 <include reference="8ZY-hK-go1"/>
                                 <include reference="AEN-va-PL2"/>
+                                <include reference="Gz9-Rk-AbT"/>
+                                <include reference="hLm-DF-KwX"/>
                                 <include reference="LdU-ZI-inY"/>
                                 <include reference="nPH-dZ-Z9X"/>
                                 <include reference="WxR-Ax-zSU"/>
                                 <include reference="kqA-Fc-qKS"/>
                                 <include reference="X2R-rZ-QKW"/>
                                 <include reference="ifX-In-KR9"/>
+                                <include reference="ciC-Qf-zgm"/>
                                 <include reference="uli-UT-Xep"/>
+                                <include reference="gEr-TW-9da"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="reverbDryMixSlider" destination="JI1-4p-XRw" id="FCG-ON-pJe"/>
+                        <outlet property="reverbRoomTypeSlider" destination="N6Z-0h-vlL" id="wJr-Ts-gMf"/>
                         <outlet property="stopButton" destination="n3X-pD-eaM" id="PHr-n8-Vd9"/>
                     </connections>
                 </viewController>
