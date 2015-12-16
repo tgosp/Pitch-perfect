@@ -168,7 +168,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjust room size and wetDryMix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppn-zi-43H">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -207,25 +207,25 @@
                                 <exclude reference="ppn-zi-43H"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="LdU-ZI-inY"/>
-                                <exclude reference="nPH-dZ-Z9X"/>
-                                <exclude reference="X2R-rZ-QKW"/>
-                                <exclude reference="ifX-In-KR9"/>
-                                <exclude reference="WxR-Ax-zSU"/>
-                                <exclude reference="kqA-Fc-qKS"/>
-                                <exclude reference="8ZY-hK-go1"/>
-                                <exclude reference="AEN-va-PL2"/>
-                                <exclude reference="gEr-TW-9da"/>
+                                <exclude reference="4ct-Rd-LNa"/>
+                                <exclude reference="IVM-ZR-zi6"/>
+                                <exclude reference="aD1-qm-ZI1"/>
                                 <exclude reference="kBh-P7-Y1C"/>
                                 <exclude reference="kgE-Vu-GHo"/>
                                 <exclude reference="tne-Am-k1Z"/>
-                                <exclude reference="IVM-ZR-zi6"/>
-                                <exclude reference="aD1-qm-ZI1"/>
+                                <exclude reference="8ZY-hK-go1"/>
+                                <exclude reference="AEN-va-PL2"/>
                                 <exclude reference="Gz9-Rk-AbT"/>
                                 <exclude reference="hLm-DF-KwX"/>
+                                <exclude reference="LdU-ZI-inY"/>
+                                <exclude reference="nPH-dZ-Z9X"/>
+                                <exclude reference="WxR-Ax-zSU"/>
+                                <exclude reference="kqA-Fc-qKS"/>
+                                <exclude reference="X2R-rZ-QKW"/>
+                                <exclude reference="ifX-In-KR9"/>
                                 <exclude reference="ciC-Qf-zgm"/>
                                 <exclude reference="uli-UT-Xep"/>
-                                <exclude reference="4ct-Rd-LNa"/>
+                                <exclude reference="gEr-TW-9da"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -241,25 +241,25 @@
                                 <include reference="ppn-zi-43H"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="LdU-ZI-inY"/>
-                                <include reference="nPH-dZ-Z9X"/>
-                                <include reference="X2R-rZ-QKW"/>
-                                <include reference="ifX-In-KR9"/>
-                                <include reference="WxR-Ax-zSU"/>
-                                <include reference="kqA-Fc-qKS"/>
-                                <include reference="8ZY-hK-go1"/>
-                                <include reference="AEN-va-PL2"/>
-                                <include reference="gEr-TW-9da"/>
+                                <include reference="4ct-Rd-LNa"/>
+                                <include reference="IVM-ZR-zi6"/>
+                                <include reference="aD1-qm-ZI1"/>
                                 <include reference="kBh-P7-Y1C"/>
                                 <include reference="kgE-Vu-GHo"/>
                                 <include reference="tne-Am-k1Z"/>
-                                <include reference="IVM-ZR-zi6"/>
-                                <include reference="aD1-qm-ZI1"/>
+                                <include reference="8ZY-hK-go1"/>
+                                <include reference="AEN-va-PL2"/>
                                 <include reference="Gz9-Rk-AbT"/>
                                 <include reference="hLm-DF-KwX"/>
+                                <include reference="LdU-ZI-inY"/>
+                                <include reference="nPH-dZ-Z9X"/>
+                                <include reference="WxR-Ax-zSU"/>
+                                <include reference="kqA-Fc-qKS"/>
+                                <include reference="X2R-rZ-QKW"/>
+                                <include reference="ifX-In-KR9"/>
                                 <include reference="ciC-Qf-zgm"/>
                                 <include reference="uli-UT-Xep"/>
-                                <include reference="4ct-Rd-LNa"/>
+                                <include reference="gEr-TW-9da"/>
                             </mask>
                         </variation>
                     </view>
