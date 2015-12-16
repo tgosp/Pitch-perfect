@@ -20,7 +20,7 @@ class PlaySoundsViewControlller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Play audio" // wasnt able to do this with storyboard, why?
+        self.title = Constants.playAudio // wasnt able to do this with storyboard, why?
         // MARK: create audio player
         audioPlayer = try! AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl)
         audioPlayer.enableRate = true
@@ -40,7 +40,6 @@ class PlaySoundsViewControlller: UIViewController {
     
     func stopAudioPlaying(){
         
-        audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
         
@@ -49,19 +48,18 @@ class PlaySoundsViewControlller: UIViewController {
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
-        stopAudioPlaying()
-        
         // MARK: play audio slow
-        audioPlayer.rate = 0.5
-        audioPlayer.play()
+        playAudioWithRate(2)
     }
     
     @IBAction func playFastAUdio(sender: AnyObject) {
-        // MARK: task 2
-        stopAudioPlaying()
-        
         // MARK: play audio fast
-        audioPlayer.rate = 2
+        playAudioWithRate(2)
+    }
+    
+    func playAudioWithRate(rate: Float){
+        stopAudioPlaying()
+        audioPlayer.rate = rate
         audioPlayer.play()
     }
     

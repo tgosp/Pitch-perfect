@@ -16,4 +16,6 @@ struct Constants {
  
     static let stopRecordingSegue = "stopRecording"
     
+    static let playAudio = "Play audio"
+    
 }
