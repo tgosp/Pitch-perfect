@@ -19,27 +19,16 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder:AVAudioRecorder!
     var recordedAudio: RecordedAudio!
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func viewWillAppear(animated: Bool) {
-        recordingLabel.text = "Tap to Record"
+        recordingLabel.text = Constants.tapToRecord
     }
 
 
     @IBAction func recordAudio(sender: UIButton) {
         // MARK: UI changes
         recordButton.enabled = false
-        recordingLabel.text = "recording in progress"
+        recordingLabel.text = Constants.recordingInProgress
         stopButton.hidden = false
         
         // MARK: record user's voice
@@ -47,7 +36,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
 
         
-        let recordingName = "recorded_audio.wav"
+        let recordingName = Constants.fileName
+        
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
         print(filePath)
@@ -72,18 +62,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             // MARK: save recorded audio file
             recordedAudio = RecordedAudio(filePath: recorder.url, audioFileTitle: recorder.url.lastPathComponent!)
             // MARK: call segue
-            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+            performSegueWithIdentifier(Constants.stopRecordingSegue, sender: recordedAudio)
         } else {
             print("Recording was not successful")
             recordButton.enabled = true
             stopButton.hidden = true
-            recordingLabel.text = "Tap to Record"
+            recordingLabel.text = Constants.tapToRecord
         }
 
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "stopRecording"){
+        if(segue.identifier == Constants.stopRecordingSegue){
             let playSoundsVC:PlaySoundsViewControlller = segue.destinationViewController as! PlaySoundsViewControlller
             let data = sender as! RecordedAudio
             playSoundsVC.recievedAudio = data
