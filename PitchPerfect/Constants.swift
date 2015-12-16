@@ -20,4 +20,10 @@ struct Constants {
     
     static let recordingWasNotSuccessful = "Recording was not successful"
     
+    static let dismiss = "Dismiss"
+    
+    static let errorAlertTitle = "Error occured"
+    
+    static let errorAlertMessage  = "Recording was not successfull, please try again"
+    
 }
